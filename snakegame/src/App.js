@@ -31,6 +31,7 @@ const App = () => {
   const endGame = () => {
     setSpeed(null);
     setGameOver(true);
+    
   };
 
   const moveSnake = ({ keyCode }) =>
@@ -86,6 +87,7 @@ const App = () => {
     setDir([0, -1]);
     setSpeed(SPEED);
     setGameOver(false);
+    resetPoint(true);
   };
 
   useEffect(() => {
@@ -109,7 +111,7 @@ const App = () => {
       {gameOver && <div>GAME OVER!</div>}
       <div> Punteggio: {punteggio.value}</div>
       <button onClick={startGame}>Start Game</button>
-      <button onClick={resetPoint}>Reset</button>
+     
     </div>
   );
 };
